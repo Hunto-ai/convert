@@ -3,9 +3,11 @@ body {
     max-width: 600px;
     margin: 2rem auto;
     padding: 0 1rem;
+    background-color: #f5f5f5;
 }
 
 .container {
+    background-color: white;
     border: 1px solid #ddd;
     padding: 2rem;
     border-radius: 8px;
@@ -15,17 +17,46 @@ body {
 h1 {
     color: #333;
     margin-bottom: 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: #444;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.upload-container {
+    margin: 2rem 0;
+}
+
+.file-input-container {
+    position: relative;
+    margin-bottom: 1rem;
 }
 
 input[type="file"] {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
+    position: absolute;
+    left: -9999px;
 }
 
-button {
+.file-label {
+    display: block;
+    padding: 0.75rem;
+    background-color: #f8f9fa;
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-label:hover {
+    border-color: #007bff;
+    background-color: #e9ecef;
+}
+
+.convert-button {
     background-color: #007bff;
     color: white;
     padding: 0.75rem 1.5rem;
@@ -34,8 +65,25 @@ button {
     cursor: pointer;
     width: 100%;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
+.convert-button:hover {
     background-color: #0056b3;
+}
+
+.instructions {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.instructions ol {
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.instructions li {
+    margin-bottom: 0.5rem;
+    color: #666;
 }

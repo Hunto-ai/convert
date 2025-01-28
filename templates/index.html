@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZoomInfo to CRM Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ZoomInfo to CRM Converter</h1>
+        <div class="upload-container">
+            <form action="{{ url_for('convert_file') }}" method="post" enctype="multipart/form-data">
+                <div class="file-input-container">
+                    <input type="file" name="file" id="file" accept=".csv" required>
+                    <label for="file" class="file-label">Choose CSV file</label>
+                </div>
+                <button type="submit" class="convert-button">Convert</button>
+            </form>
+        </div>
+        <div class="instructions">
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Export your contacts from ZoomInfo as a CSV file</li>
+                <li>Upload the CSV file using the form above</li>
+                <li>Click "Convert" to download the CRM-ready CSV file</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
