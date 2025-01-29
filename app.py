@@ -56,6 +56,8 @@ def convert_zoominfo_to_crm(reader):
                 crm_row[crm_field] = str(float(revenue) * 1000) if revenue.isdigit() else ''
             elif crm_field == 'Lead Source':
                 crm_row[crm_field] = 'ZoomInfo'
+            elif crm_field == 'Organization':
+                crm_row[crm_field] = 'Regina Office'
             elif isinstance(zoominfo_field, str) and zoominfo_field in row:
                 crm_row[crm_field] = row[zoominfo_field]
             else:
